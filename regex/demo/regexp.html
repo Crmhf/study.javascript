@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+</head>
+<body>
+
+<script>
+	/**
+     * 字符串方法返回值有三类：
+     * 1.返回数字类型: indexOf, lastIndexOf, search, charCodeAt
+     * 2.返回数组类型: split, match
+     * 3.返回字符串： charAt, substring, substr, slice, replace
+	 */
+
+
+	str = 'aa  djks dasjdks qww      eeeeqqq eewe';
+
+	// \s+ 贪婪模式，尽可能的去匹配，匹配的次数比较少，性能高
+    // \s 只表示一个空格，所有匹配的次数多，相对较低
+	function getRegExp(){
+		return /\s+/g;
+    }
+    function deal(){
+        return '';
+    }
+
+	console.log(str.replace(getRegExp(),deal));
+
+</script>
+
+</body>
+</html>

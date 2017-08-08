@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+</head>
+<body>
+
+<script>
+	// 替换父字符串中匹配的字符串
+    // 接收2个参数，1.匹配的字符串，可以是字符串也可以是正则表达式
+    //             2.替换的字符串，可以是简单类型如字符串，也可以时函数
+    //               函数必须要有返回值，并且将这个返回值作为字符串
+	var str = 'www.baidu.com';
+    console.log(str.replace(/baidu/,'google'));
+
+	console.log(str.replace(/baidu/,function(){
+        return 'bing';
+	}));
+
+	str2 = 'aa  djks dasjdks qww      eeeeqqq eewe';
+
+	console.log(str2.replace(/\s+/g,function(){
+		return '';
+	}));
+</script>
+
+</body>
+</html>

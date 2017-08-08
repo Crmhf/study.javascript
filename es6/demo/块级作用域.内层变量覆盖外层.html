@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js的优先赋值</title>
+</head>
+<body>
+<!-- 没有块级作用域出现的问题 -->
+<script>
+	/**
+	 * @type {Date}
+	 */
+
+	// ES5只有全局作用域和函数作用域，没有块级作用域
+    // 内层的变量可能会覆盖外层的变量
+	var time = new Date();
+
+    function fun(){
+        console.log(time);
+        if(false){
+        	var time = 'Hello World!';
+        }
+    };
+
+    fun(); // undifine
+</script>
+</body>
+</html>

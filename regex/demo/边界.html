@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分界</title>
+</head>
+<body>
+
+<script>
+	// ^ 开头 注意不能紧跟于左中括号的后面
+    console.log(/^hello/.test('hello xxxxx')); // true
+    console.log(/^xxxxx/.test('hello xxxxx')); // false
+
+	// $ 结尾
+	console.log(/$xxxxx/.test('hello xxxxx')); // true
+	console.log(/^hello/.test('hello xxxxx')); // false
+
+	// \b 单词边界 指[a-zA-z_0-9]之外的字符
+	console.log('hello xxxxx'.match(/\b\w+\b/g)); // ['hello','xxxxx']
+
+	// \B 非单词边界
+	console.log('hello xxxxx'.match(/\b\w+\b/g)); // true
+
+</script>
+
+</body>
+</html>

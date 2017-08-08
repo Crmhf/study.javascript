@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+<body>
+
+<script>
+	// 定义了一个字符串，中间的空格有的是两个有个的是三个
+	var str = 'abcde';
+	console.log(str.indexOf('cd'));
+	console.log(str.search('cd'));
+	// 用來寻找字符或者字符串在父字符串中的位置，可以传递字符，也可以传递字符串
+	console.log(str.search(/cd/));
+</script>
+
+</body>
+</html>
