@@ -13,18 +13,18 @@
 	 * @type {Date}
 	 */
 
-	// ES5只有全局作用域和函数作用域，没有块级作用域
-    // 内层的变量可能会覆盖外层的变量
+		// ES5只有全局作用域和函数作用域，没有块级作用域
+		// 内层的变量可能会覆盖外层的变量
 	var time = new Date();
 
-    function fun(){
-        console.log(time);
-        if(false){
-        	var time = 'Hello World!';
-        }
-    };
+	function fun(){
+		console.log(time);
+		if(false){
+			var time = 'Hello World!';
+		}
+	};
 
-    fun(); // undifine
+	fun(); // undifine
 </script>
 </body>
 </html>

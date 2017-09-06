@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不做任何控制的时候，直接调用会出问题</title>
+    <script src="3rd/jquery.js"></script>
+    <style type="text/css">
+        body{ margin:0; border:0; }
+        .g-mod{
+            width:100px;
+            height:100px;
+            cursor:pointer;
+            background:orange;
+        }
+    </style>
+</head>
+<body>
+<!-- 注释模块 -->
+<div class="m-topic g-mod">
+
+</div>
+<!-- /注释模块 -->
+
+<script>
+
+    $('.g-mod').click(function(){
+        alert(1);
+    });
+
+   for(var i=0,len=100000; i<len; i++){
+       console.log(i);
+   }
+</script>
+
+</body>
+</html>
