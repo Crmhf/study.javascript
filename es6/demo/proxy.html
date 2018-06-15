@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Proxy</title>
+</head>
+
+<body>
+  <script>
+    let target = {
+      name: "target",
+      value: 42
+    };
+
+    let proxy = new Proxy(target, {
+      has(trapTarget, key) {
+        if (key === "value") {
+          return false;
+        } else {
+          return Reflect.has(trapTarget, key);
+        }
+      }
+    });
+
+    console.log("value" in proxy);
+    console.log("name" in proxy);
+  </script>
+</body>
+
+</html>
