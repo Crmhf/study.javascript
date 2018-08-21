@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>let</title>
 </head>
+
 <body>
-<!-- 注释模块 -->
-<div class="m-topic g-mod">
-    <script>
-        var a = 100;
-        let b = 200;
-        console.log(a);
-        console.error(b);
-    </script>
-</div>
-<!-- /注释模块 -->
+    <!-- 注释模块 -->
+    <div class="m-topic g-mod">
+        <script>
+            {
+                var a = 100;
+                let b = 200;
+            }
+            console.log(a); // 100
+            console.error(b); // b is not defined -- Error
+        </script>
+    </div>
+    <!-- /注释模块 -->
 </body>
+
 </html>
+
+<!-- 
+1.let不会出现变量提升
+2.只要块级作用域内存在let命令，它所声明的变量就“绑定”(binding)这个区域，不再受外部的影响
+3.不允许重复声明，let不允许在相同的作用域内，重复声明同一个变量
+-->

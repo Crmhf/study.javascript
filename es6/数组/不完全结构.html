@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>不完全解构</title>
+</head>
+
+<body>
+  <script>
+    let [x, y] = [1, 2, 3];
+    console.log(x); // 1
+    console.log(y); // 2
+
+    let [a, [b], c] = [1, [2, 3], 4];
+    console.log(a); // 1
+    console.log(b); // 2 匹配数组里面的第一个数，严格匹配
+    console.log(c); // 4
+
+  </script>
+</body>
+
+</html>
