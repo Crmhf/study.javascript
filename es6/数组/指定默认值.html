@@ -17,8 +17,16 @@
     console.log(temp); // tempString
 
     var [x = "aaa", y] = ["bbb"];
-    console.log(x);
-    console.log(y);
+    console.log(x); // aaa
+    console.log(y); // undefined
+
+    var [m, n = "aaa"] = ["bbb"];
+    console.log(m); // bbb
+    console.log(n); // aaa
+
+    var [p, q = "aaa"] = ["bbb", undefined];
+    console.log(p); // bbb
+    console.log(q); // aaa, undefined不会把已赋值的变量值覆盖 
   </script>
 </body>
 
