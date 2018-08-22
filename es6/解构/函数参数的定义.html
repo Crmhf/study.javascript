@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数参数的定义</title>
+</head>
+
+<body>
+  <script>
+    // 参数是一组有次序的值
+    function fun([x, y, z]) {
+      // x = 100;
+      // y = 200;
+      // z = 300;
+    };
+    fun([100, 200, 300]);
+
+    // 参数是一组无次序的值
+    function fun({ id, name, age }) {
+      // id ="007";
+      // name = "crmhf"
+      // age = 28; 　
+    };
+    fun({ id: "007", name: "crmhf", age: 28 });
+  </script>
+</body>
+
+</html>

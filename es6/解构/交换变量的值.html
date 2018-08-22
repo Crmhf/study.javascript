@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>交换变量的值</title>
+</head>
+
+<body>
+  <script>
+    // ES6
+    console.log("ES6:");
+    var x = 100;
+    var y = 200;
+    console.log("交换前：");
+    console.log("x = " + x);
+    console.log("y = " + y);
+    [x, y] = [y, x];
+    console.log("交换后：");
+    console.log("x = " + x);
+    console.log("y = " + y);
+  </script>
+</body>
+
+</html>
